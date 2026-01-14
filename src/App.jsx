@@ -89,8 +89,9 @@ export default function CloudPortfolio() {
       ],
       category: "Backend Development",
       status: "Completado",
-      github: "https://github.com/uavargas/Sistema-de-Gestion-de-Tickets-de-Soporte-Tecnico.git", // Reemplaza con tu link real
-      demo: null, 
+      github:
+        "https://github.com/uavargas/Sistema-de-Gestion-de-Tickets-de-Soporte-Tecnico.git", // Reemplaza con tu link real
+      demo: null,
     },
   ];
 
@@ -113,20 +114,19 @@ export default function CloudPortfolio() {
     },
 
     {
-      role: "Web & Cloud Developer (Proyecto)",
+      role: "Web & Cloud Developer",
       company: "Fundación CEPAV",
       location: "Colombia",
       period: "3 meses",
       description:
-        "Desarrollo de una aplicación web educativa y diseño de una arquitectura serverless en AWS, enfocada en escalabilidad, bajo mantenimiento y automatización.",
+        "Participé en el desarrollo de nuevas funcionalidades para el sitio institucional, diseñando una arquitectura serverless en AWS enfocada en escalabilidad y cero mantenimiento de infraestructura.",
       achievements: [
-        "Desarrollo frontend con HTML, CSS y JavaScript",
-        "Diseño e implementación de arquitectura serverless en AWS",
-        "Hosting del frontend en Amazon S3 con CloudFront y OAC",
-        "Backend con AWS Lambda y API Gateway",
-        "Persistencia de datos en DynamoDB",
-        "Notificaciones mediante Amazon SNS",
-        "Automatización CI/CD usando GitHub Actions",
+        "Desarrollo de interfaces dinámicas y responsive utilizando React.js y componentes modernos.",
+        "Diseño e implementación de arquitectura Serverless con AWS Lambda, API Gateway y DynamoDB.",
+        "Definición de infraestructura como código (IaC) mediante AWS CDK y Parameter Store.",
+        "Implementación de servicios de mensajería asíncrona con Amazon SNS para notificaciones.",
+        "Hosting de alto rendimiento utilizando Amazon S3, CloudFront y protección OAC.",
+        "Automatización de despliegues globales mediante pipelines de CI/CD con GitHub Actions y Bitbucket.",
       ],
     },
 
