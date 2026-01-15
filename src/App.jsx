@@ -330,8 +330,8 @@ export default function CloudPortfolio() {
           <p className="text-xl md:text-2xl text-gray-400 mb-6"></p>
 
           <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed text-center md:text-left">
-            Soy Ingeniero en Telecomunicaciones con más de 3 años de experiencia
-            en infraestructura y soporte técnico, principalmente en entornos
+            Ingeniero en Telecomunicaciones con más de 3 años de experiencia en
+            infraestructura y soporte técnico, principalmente en entornos
             on-premise. Actualmente me encuentro en un proceso de transición
             hacia la nube, enfocado en AWS, automatización, Infraestructura como
             Código y CI/CD.
@@ -386,9 +386,10 @@ export default function CloudPortfolio() {
           <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 mb-12 space-y-10">
             {/* Intro */}
             <p className="text-gray-300 leading-relaxed text-lg">
-              Ingeniero en Telecomunicaciones con experiencia en soporte técnico
-              e infraestructura TI, trabajando en entornos empresariales con
-              tecnologías Microsoft y plataformas de virtualización en VMware.
+              Ingeniero en Telecomunicaciones con experiencia en infraestructura
+              TI y soporte técnico en entornos empresariales, trabajando con
+              tecnologías Microsoft, virtualización con VMware y monitoreo de
+              infraestructura mediante herramientas como Zabbix.
             </p>
 
             {/* Bloques de enfoque */}
