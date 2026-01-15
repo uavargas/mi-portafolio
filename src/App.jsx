@@ -16,6 +16,13 @@ import {
   Calendar,
   BookOpen,
   Cpu,
+  GraduationCap,
+  Leaf,
+  Boxes,
+  Container,
+  ServerCog,
+  Braces,
+  CloudCog,
 } from "lucide-react";
 
 export default function CloudPortfolio() {
@@ -190,40 +197,44 @@ export default function CloudPortfolio() {
       topic: "AWS Cloud Practitioner",
       platform: "AWS Training",
       status: "En progreso",
-      icon: "☁️",
+      icon: Cloud,
     },
     {
       topic: "Spring Boot & Microservices",
       platform: "Udemy / Platzi",
       status: "En progreso",
-      icon: "🍃",
+      icon: Leaf,
     },
     {
       topic: "Arquitectura de Software",
       platform: "Estudio autodidacta",
       status: "En progreso",
-      icon: "🏗️",
+      icon: Boxes,
     },
     {
       topic: "Docker & Contenedores",
       platform: "Docker Docs",
       status: "Próximamente",
-      icon: "🐳",
+      icon: Container,
     },
   ];
 
   const education = [
     {
-      degree: "ONE Tech Foundation G8 - Back End Developer",
-      institution: "ONE Oracle Next Education - Alura Latam",
+      degree: "ONE Tech Foundation G8 – Back End Developer",
+      institution: "Oracle Next Education · Alura Latam",
       year: "2025",
-      icon: "🎓",
+      level: "Programa Técnico / Bootcamp",
+      icon: BookOpen,
+      status: "Finalizado",
     },
     {
       degree: "Ingeniería en Telecomunicaciones",
-      institution: "Universidad Universidad Naciona Abierta y a Distancia UNAD",
+      institution: "Universidad Nacional Abierta y a Distancia (UNAD)",
       year: "2022",
-      icon: "🎓",
+      level: "Formación Profesional",
+      icon: GraduationCap,
+      status: "Finalizado",
     },
   ];
 
@@ -245,9 +256,9 @@ export default function CloudPortfolio() {
               </div>
               <span className="text-xl font-bold">
                 <span className="text-cyan-400 font-semibold">
-                  Infraestructura
+                  Infrastructure
                 </span>
-                <span className="text-gray-400"> · Cloud · DevOps</span>
+                <span className="text-gray-400"> · Cloud · DevOps Engineer</span>
 
                 <span className="text-gray-400"> </span>
               </span>
@@ -316,12 +327,6 @@ export default function CloudPortfolio() {
         className="min-h-screen flex items-center justify-center px-6 pt-20"
       >
         <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
-            <span className="text-cyan-400 text-sm uppercase tracking-widest">
-              Ingeniero en Telecomunicaciones
-            </span>
-          </div>
-
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="block text-white">Hola, soy</span>
             <span className="block text-cyan-400">Alonso Vargas</span>
@@ -329,10 +334,10 @@ export default function CloudPortfolio() {
 
           <p className="text-xl md:text-2xl text-gray-400 mb-6"></p>
 
-          <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed text-center md:text-left">
-            Ingeniero en Telecomunicaciones en transición hacia la nube y la
-            automatización, con enfoque en AWS, Infraestructura como Código y
-            prácticas CI/CD.
+          <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed text-center">
+            Ingeniero de Infraestructura con enfoque en Cloud y automatización.
+            Experiencia en entornos on-premise y evolución hacia AWS, IaC y
+            prácticas DevOps.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
@@ -435,35 +440,64 @@ export default function CloudPortfolio() {
 
           {/* Educación */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">
-              🎓 Formación Académica
+            {/* Título */}
+            <h3 className="flex items-center justify-center md:justify-start gap-2 text-2xl font-bold text-white mb-8">
+              <GraduationCap className="w-6 h-6 text-cyan-400" />
+              Formación Académica
             </h3>
 
+            {/* Lista */}
             <div className="grid gap-6">
-              {education.map((edu, idx) => (
-                <div
-                  key={idx}
-                  className="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl">{edu.icon}</div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-cyan-400">{edu.institution}</p>
-                      <p className="text-gray-500 text-sm">{edu.year}</p>
+              {education.map((edu, idx) => {
+                const Icon = edu.icon;
+
+                return (
+                  <div
+                    key={idx}
+                    className="bg-slate-900 border border-slate-800 rounded-xl p-6 
+                     hover:border-cyan-500/30 transition-all"
+                  >
+                    <div className="flex items-start gap-4">
+                      {/* Icono */}
+                      <div className="mt-1">
+                        <Icon className="w-6 h-6 text-cyan-400" />
+                      </div>
+
+                      {/* Contenido */}
+                      <div className="flex-1">
+                        <h4 className="text-lg font-semibold text-white">
+                          {edu.degree}
+                        </h4>
+
+                        <p className="text-cyan-400">{edu.institution}</p>
+
+                        {/* Meta info */}
+                        <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-gray-500">
+                          <span>{edu.level}</span>
+                          <span>•</span>
+                          <span>{edu.year}</span>
+
+                          <span
+                            className={`px-2 py-0.5 rounded-full border ${
+                              edu.status === "En progreso"
+                                ? "text-cyan-400 border-cyan-500/30"
+                                : "text-gray-400 border-gray-600/30"
+                            }`}
+                          >
+                            {edu.status}
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* ===================== SKILLS SECTION ===================== */}
-
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center">
@@ -474,17 +508,15 @@ export default function CloudPortfolio() {
             {/* Infraestructura */}
             <div className="border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all">
               <h3 className="flex items-center gap-2 text-xl font-bold text-cyan-400 mb-6 uppercase tracking-wider">
-                <Server className="w-5 h-5" />
+                <ServerCog className="w-6 h-6" />
                 Infraestructura
               </h3>
 
               <div className="space-y-4">
                 {skills.infraestructura.map((skill) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-gray-300">{skill.name}</span>
-                    </div>
-                    <span className="text-xs text-gray-500">{skill.level}</span>
+                    <span className="text-gray-300">{skill.name}</span>
+                    <p className="text-xs text-gray-500">{skill.level}</p>
                   </div>
                 ))}
               </div>
@@ -493,22 +525,24 @@ export default function CloudPortfolio() {
             {/* Desarrollo Backend */}
             <div className="border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all">
               <h3 className="flex items-center gap-2 text-xl font-bold text-cyan-400 mb-6 uppercase tracking-wider">
-                <Code2 className="w-5 h-5" />
+                <Braces className="w-6 h-6" />
                 Desarrollo Backend
               </h3>
 
               <div className="space-y-4">
                 {skills.desarrollo.map((skill) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center justify-between">
                       <span className="text-gray-300">{skill.name}</span>
+
                       {skill.learning && (
-                        <span className="text-xs text-cyan-400">
-                          📚 En progreso
+                        <span className="flex items-center gap-1 text-xs text-cyan-400">
+                          <BookOpen className="w-3 h-3" />
+                          En progreso
                         </span>
                       )}
                     </div>
-                    <span className="text-xs text-gray-500">{skill.level}</span>
+                    <p className="text-xs text-gray-500">{skill.level}</p>
                   </div>
                 ))}
               </div>
@@ -517,22 +551,24 @@ export default function CloudPortfolio() {
             {/* Cloud & DevOps */}
             <div className="border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all">
               <h3 className="flex items-center gap-2 text-xl font-bold text-cyan-400 mb-6 uppercase tracking-wider">
-                <Cloud className="w-5 h-5" />
+                <CloudCog className="w-6 h-6" />
                 Cloud & DevOps
               </h3>
 
               <div className="space-y-4">
                 {skills.cloud.map((skill) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center justify-between">
                       <span className="text-gray-300">{skill.name}</span>
+
                       {skill.learning && (
-                        <span className="text-xs text-cyan-400">
-                          📚 En progreso
+                        <span className="flex items-center gap-1 text-xs text-cyan-400">
+                          <BookOpen className="w-3 h-3" />
+                          En progreso
                         </span>
                       )}
                     </div>
-                    <span className="text-xs text-gray-500">{skill.level}</span>
+                    <p className="text-xs text-gray-500">{skill.level}</p>
                   </div>
                 ))}
               </div>
@@ -681,36 +717,52 @@ export default function CloudPortfolio() {
       {/* Learning Section */}
       <section id="aprendizaje" className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">
+          {/* Título */}
+          <h2 className="text-4xl font-bold mb-12 text-center md:text-left">
             Aprendizaje <span className="text-cyan-400">Continuo</span>
           </h2>
 
+          {/* Grid */}
           <div className="grid md:grid-cols-2 gap-6">
-            {learning.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">{item.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-white font-bold mb-2">{item.topic}</h3>
-                    <p className="text-gray-400 text-sm mb-2">
-                      {item.platform}
-                    </p>
-                    <span
-                      className={`text-xs px-2 py-1 rounded-full ${
-                        item.status === "En progreso"
-                          ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                          : "bg-gray-500/10 text-gray-400 border border-gray-500/20"
-                      }`}
-                    >
-                      {item.status}
-                    </span>
+            {learning.map((item, idx) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={idx}
+                  className="bg-slate-900 border border-slate-800 rounded-xl p-6
+                       hover:border-cyan-500/40 transition-all"
+                >
+                  <div className="flex items-start gap-4">
+                    {/* Icono */}
+                    <Icon className="w-7 h-7 text-cyan-400 mt-1 flex-shrink-0" />
+
+                    {/* Contenido */}
+                    <div className="flex-1">
+                      <h3 className="text-white font-semibold text-lg mb-1">
+                        {item.topic}
+                      </h3>
+
+                      <p className="text-gray-400 text-sm mb-3">
+                        {item.platform}
+                      </p>
+
+                      {/* Estado */}
+                      <span
+                        className={`inline-block text-xs px-3 py-1 rounded-full uppercase tracking-wide
+                    ${
+                      item.status === "En progreso"
+                        ? "bg-cyan-500/10 text-cyan-400 border border-cyan-500/30"
+                        : "bg-gray-500/10 text-gray-400 border border-gray-500/30"
+                    }`}
+                      >
+                        {item.status}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
