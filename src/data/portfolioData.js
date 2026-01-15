@@ -1,11 +1,11 @@
 // src/data/portfolioData.js
-import { 
-  Cloud, 
-  Leaf, 
-  Boxes, 
-  Container, 
-  BookOpen, 
-  GraduationCap 
+import {
+  Cloud,
+  Leaf,
+  Boxes,
+  Container,
+  BookOpen,
+  GraduationCap,
 } from "lucide-react";
 
 export const portfolioData = {
@@ -36,7 +36,8 @@ export const portfolioData = {
       ],
       category: "Cloud & DevOps",
       status: "Completado",
-      github: "https://github.com/uavargas/PROYECTOAWS-TERRAFORM-GITACTIONS.git",
+      github:
+        "https://github.com/uavargas/PROYECTOAWS-TERRAFORM-GITACTIONS.git",
       demo: "https://d2cj6j92jllyde.cloudfront.net",
     },
     {
@@ -64,7 +65,8 @@ export const portfolioData = {
       ],
       category: "Backend Development",
       status: "Completado",
-      github: "https://github.com/uavargas/Sistema-de-Gestion-de-Tickets-de-Soporte-Tecnico.git",
+      github:
+        "https://github.com/uavargas/Sistema-de-Gestion-de-Tickets-de-Soporte-Tecnico.git",
       demo: null,
     },
   ],
@@ -125,24 +127,54 @@ export const portfolioData = {
       { name: "Windows Server (2008 R2 – 2022)", level: "Avanzado" },
       { name: "Active Directory & GPO", level: "Avanzado" },
       { name: "Microsoft 365 / Entra ID", level: "Avanzado" },
-      { name: "IIS, Nginx, Apache", level: "Intermedio" },
-      { name: "VMware vCenter", level: "Intermedio" },
-      { name: "PowerShell", level: "Intermedio" },
+      { name: "Servicios Web (IIS, Nginx, Apache)", level: "Intermedio" },
+      { name: "Virtualización con VMware vCenter", level: "Intermedio" },
+      { name: "Automatización con PowerShell", level: "Intermedio" },
     ],
+
     desarrollo: [
       { name: "Java", level: "Intermedio", learning: true },
-      { name: "Spring Boot", level: "Básico ", learning: true },
-      { name: "APIs REST", level: "Básico ", learning: true },
-      { name: "JPA / Hibernate", level: "Básico", learning: true },
-      { name: "MySQL / PostgreSQL", level: "Básico", learning: true },
+      { name: "Spring Boot", level: "Fundamentos", learning: true },
+      { name: "APIs REST", level: "Fundamentos", learning: true },
+      { name: "JPA / Hibernate", level: "Fundamentos", learning: true },
+      {
+        name: "Bases de datos (MySQL / PostgreSQL)",
+        level: "Fundamentos",
+        learning: true,
+      },
     ],
+
     cloud: [
-      { name: "AWS (EC2, S3, Lambda, SNS, DynamoDB)", level: "Básico", learning: true },
-      { name: "Arquitectura Cloud / Serverless", level: "Básico", learning: true },
-      { name: "Linux (Ubuntu)", level: "Básico ", learning: true },
-      { name: "Git / GitHub", level: "Intermedio", learning: true },
-      { name: "GitHub Actions (CI/CD)", level: "Básico", learning: true },
-      { name: "Terraform (IaC)", level: "Básico", learning: true },
+      {
+        name: "AWS (EC2, S3, Lambda, SNS, DynamoDB)",
+        level: "Fundamentos prácticos",
+        learning: true,
+      },
+      {
+        name: "Arquitectura Cloud / Serverless",
+        level: "Fundamentos",
+        learning: true,
+      },
+      {
+        name: "Linux (Ubuntu)",
+        level: "Administración básica",
+        learning: true,
+      },
+      {
+        name: "Git / GitHub",
+        level: "Intermedio",
+        learning: true,
+      },
+      {
+        name: "GitHub Actions (CI/CD)",
+        level: "Fundamentos",
+        learning: true,
+      },
+      {
+        name: "Terraform (IaC)",
+        level: "Fundamentos",
+        learning: true,
+      },
     ],
   },
 

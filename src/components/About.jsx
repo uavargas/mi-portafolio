@@ -10,7 +10,7 @@ const About = ({ education }) => {
 
         <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 mb-12 space-y-10">
           <p className="text-gray-300 leading-relaxed text-lg">
-            Profesional con experiencia en infraestructura TI y soporte técnico en entornos empresariales, 
+            Profesional con mas de 3 años de experiencia en infraestructura TI y soporte técnico en entornos empresariales, 
             trabajando con tecnologías Microsoft, virtualización y monitoreo.
           </p>
 
@@ -20,7 +20,7 @@ const About = ({ education }) => {
                 <Server className="w-5 h-5" /> Infraestructura
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Experiencia en Windows Server, Active Directory, Microsoft 365, VMware y redes on-premise.
+                Experiencia en Windows Server, Active Directory, Microsoft 365, VMware, Almacanamiento y monitoreo.
               </p>
             </div>
             <div className="bg-slate-950 border border-slate-800 rounded-xl p-6">
