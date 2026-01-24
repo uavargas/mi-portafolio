@@ -6,17 +6,22 @@ import {
   Container,
   BookOpen,
   GraduationCap,
+  Server,
+  Target,
 } from "lucide-react";
 
 export const portfolioData = {
+  /* =========================
+     PROJECTS
+  ========================== */
   projects: [
     {
       id: 1,
       title: "API RESTful con Spring Boot",
       description:
-        "Sistema de gestión desarrollado con Spring Boot, JPA y MySQL. Incluye autenticación JWT y documentación con Swagger",
+        "Sistema de gestión desarrollado con Spring Boot, JPA y MySQL. Incluye autenticación JWT y documentación con Swagger.",
       tech: ["Java", "Spring Boot", "MySQL", "JWT", "Swagger"],
-      category: "Backend Development",
+      category: "Backend",
       status: "En desarrollo",
       github: "#",
       demo: "#",
@@ -25,14 +30,15 @@ export const portfolioData = {
       id: 2,
       title: "Arquitectura Serverless con Terraform & CI/CD",
       description:
-        "Infraestructura 100% automatizada (IaC) orquestando un ecosistema Serverless en AWS. Integra Lambda (Python), API Gateway y DynamoDB.",
+        "Infraestructura 100% automatizada (IaC) orquestando un ecosistema Serverless en AWS con Lambda, API Gateway y DynamoDB.",
       tech: [
         "Terraform",
         "AWS Lambda",
-        "GitHub Actions",
+        "API Gateway",
         "DynamoDB",
-        "CloudFront",
+        "GitHub Actions",
         "Python",
+        "CloudFront",
       ],
       category: "Cloud & DevOps",
       status: "Completado",
@@ -44,7 +50,7 @@ export const portfolioData = {
       id: 3,
       title: "Automatización de Infraestructura Windows",
       description:
-        "Scripts PowerShell para automatización de tareas en Active Directory, gestión de usuarios y configuración de servidores",
+        "Automatización de tareas administrativas en Active Directory y servidores Windows mediante scripts PowerShell.",
       tech: ["PowerShell", "Active Directory", "Windows Server"],
       category: "Infrastructure",
       status: "Completado",
@@ -55,15 +61,15 @@ export const portfolioData = {
       id: 4,
       title: "Sistema de Gestión de Tickets (Spring Boot)",
       description:
-        "Aplicación para soporte técnico desarrollada con Java 21. Implementa una Arquitectura Limpia (Clean Architecture) en capas.",
+        "Aplicación de soporte técnico desarrollada con Java 21 y Spring Boot, implementando Clean Architecture.",
       tech: [
         "Java 21",
-        "Spring Boot 3.5",
+        "Spring Boot 3",
         "PostgreSQL",
         "Maven",
         "Clean Architecture",
       ],
-      category: "Backend Development",
+      category: "Backend",
       status: "Completado",
       github:
         "https://github.com/uavargas/Sistema-de-Gestion-de-Tickets-de-Soporte-Tecnico.git",
@@ -71,6 +77,9 @@ export const portfolioData = {
     },
   ],
 
+  /* =========================
+     EXPERIENCE
+  ========================== */
   experience: [
     {
       role: "Infrastructure Engineer",
@@ -78,13 +87,13 @@ export const portfolioData = {
       location: "Medellín, Colombia",
       period: "Actual",
       description:
-        "Administración y soporte de infraestructura on-premise y servicios Microsoft 365, garantizando la disponibilidad y seguridad.",
+        "Administración y soporte de infraestructura on-premise y servicios Microsoft 365, garantizando disponibilidad y seguridad.",
       achievements: [
         "Administración de Microsoft 365 y servicios on-premise",
-        "Gestión de servidores Windows Server (2008 R2–2022) y Linux Ubuntu",
-        "Administración de Active Directory: DCs, usuarios, grupos y GPOs",
+        "Gestión de Windows Server (2008 R2–2022) y Linux Ubuntu",
+        "Administración de Active Directory, usuarios, grupos y GPOs",
         "Gestión de servicios DNS y DHCP",
-        "Despliegue de máquinas virtuales en VMware vCenter",
+        "Despliegue y administración de máquinas virtuales en VMware vCenter",
         "Monitoreo de infraestructura y resolución de incidentes",
       ],
     },
@@ -94,14 +103,14 @@ export const portfolioData = {
       location: "Colombia",
       period: "3 meses",
       description:
-        "Desarrollo de funcionalidades para sitio institucional con arquitectura serverless en AWS enfocada en escalabilidad.",
+        "Desarrollo de soluciones web y arquitectura Serverless en AWS enfocadas en escalabilidad y automatización.",
       achievements: [
-        "Desarrollo de interfaces dinámicas con React.js",
+        "Desarrollo frontend con React.js",
         "Diseño de arquitectura Serverless (Lambda, API Gateway, DynamoDB)",
-        "Infraestructura como código (IaC) mediante AWS CDK",
-        "Implementación de mensajería con Amazon SNS",
-        "Hosting en Amazon S3 y CloudFront con protección OAC",
-        "Automatización CI/CD con GitHub Actions y Bitbucket",
+        "Infraestructura como Código (IaC) con AWS CDK",
+        "Implementación de notificaciones con Amazon SNS",
+        "Hosting en S3 y CloudFront con OAC",
+        "Automatización CI/CD con GitHub Actions",
       ],
     },
     {
@@ -110,18 +119,21 @@ export const portfolioData = {
       location: "Medellín, Colombia",
       period: "15 meses",
       description:
-        "Administración y soporte de infraestructura tecnológica en entornos on-premise y servicios corporativos.",
+        "Administración de infraestructura tecnológica y servicios corporativos en entornos empresariales.",
       achievements: [
         "Administración de Microsoft 365",
-        "Gestión de servidores Windows Server y Linux Ubuntu",
-        "Administración de Active Directory, GPOs, DNS y DHCP Fileserver",
-        "Gestión y administración de máquinas virtuales en VMware vCenter",
-        "Monitoreo de infraestructura y resolución de incidentes",
+        "Gestión de Windows Server y Linux Ubuntu",
+        "Administración de Active Directory, GPOs, DNS y DHCP",
+        "Gestión de máquinas virtuales en VMware vCenter",
+        "Monitoreo y resolución de incidentes",
         "Documentación técnica y procedimientos operativos",
       ],
     },
   ],
 
+  /* =========================
+     SKILLS
+  ========================== */
   skills: {
     infraestructura: [
       { name: "Windows Server (2008 R2 – 2022)", level: "Avanzado" },
@@ -131,7 +143,6 @@ export const portfolioData = {
       { name: "Virtualización con VMware vCenter", level: "Intermedio" },
       { name: "Automatización con PowerShell", level: "Intermedio" },
     ],
-
     desarrollo: [
       { name: "Java", level: "Intermedio", learning: true },
       { name: "Spring Boot", level: "Fundamentos", learning: true },
@@ -143,7 +154,6 @@ export const portfolioData = {
         learning: true,
       },
     ],
-
     cloud: [
       {
         name: "AWS (EC2, S3, Lambda, SNS, DynamoDB)",
@@ -160,24 +170,19 @@ export const portfolioData = {
         level: "Administración básica",
         learning: true,
       },
-      {
-        name: "Git / GitHub",
-        level: "Intermedio",
-        learning: true,
-      },
+      { name: "Git / GitHub", level: "Intermedio", learning: true },
       {
         name: "GitHub Actions (CI/CD)",
         level: "Fundamentos",
         learning: true,
       },
-      {
-        name: "Terraform (IaC)",
-        level: "Fundamentos",
-        learning: true,
-      },
+      { name: "Terraform (IaC)", level: "Fundamentos", learning: true },
     ],
   },
 
+  /* =========================
+     LEARNING
+  ========================== */
   learning: [
     {
       topic: "AWS Cloud Practitioner",
@@ -205,6 +210,9 @@ export const portfolioData = {
     },
   ],
 
+  /* =========================
+     EDUCATION
+  ========================== */
   education: [
     {
       degree: "ONE Tech Foundation G8 – Back End Developer",
@@ -216,11 +224,36 @@ export const portfolioData = {
     },
     {
       degree: "Ingeniería en Telecomunicaciones",
-      institution: "Universidad Nacional Abierta y a Distancia (UNAD)",
+      institution:
+        "Universidad Nacional Abierta y a Distancia (UNAD)",
       year: "2022",
       level: "Formación Profesional",
       icon: GraduationCap,
       status: "Finalizado",
+    },
+  ],
+
+  /* =========================
+     AREAS
+  ========================== */
+  areas: [
+    {
+      title: "Infraestructura",
+      icon: Server,
+      description:
+        "Experiencia en Windows Server, Active Directory, Microsoft 365, VMware, almacenamiento y monitoreo.",
+    },
+    {
+      title: "Desarrollo & Cloud",
+      icon: Cloud,
+      description:
+        "En transición hacia el desarrollo con Java y Spring Boot, explorando servicios de AWS.",
+    },
+    {
+      title: "Objetivo",
+      icon: Target,
+      description:
+        "Aplicar prácticas DevOps para diseñar y automatizar soluciones modernas y escalables.",
     },
   ],
 };
