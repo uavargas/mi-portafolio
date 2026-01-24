@@ -105,7 +105,7 @@ const Hero = ({ scrollToSection }) => {
         <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
           Ingeniero de Telecomunicaciones con experiencia en infraestructura
           on-premise y una evolución profesional hacia Cloud, automatización,
-          AWS e Infraestructura como Código bajo prácticas DevOps.
+          implementación de Infraestructura como Código bajo prácticas DevOps.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
