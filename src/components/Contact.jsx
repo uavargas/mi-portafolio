@@ -20,8 +20,9 @@ const Contact = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-sm text-gray-500">
-          <p>Diseñado por <span className="text-cyan-400">AlonsoKode</span></p>
-          <p>Infraestructura • Backend • Cloud Engineering</p>
+          <p>Desarrollado por <span className="text-cyan-400">AlonsoKode</span></p>
+          <p>Infraestructura | Backend | Cloud Engineering</p>
+
         </div>
       </div>
     </section>
